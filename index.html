@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA 2K27 MyCAREER Badge Planner – Plan Your Player Build Efficiently</title>
+    <meta name="description" content="Download NBA 2K27 MyCAREER Badge Planner for Windows. Track badge requirements, compare attributes, and record play sessions – a free concept tool for dedicated players.">
+    <meta name="keywords" content="NBA 2K27, MyCAREER badge planner, badge planner, NBA 2K tool, basketball gaming tool, Windows app, build planner, VC planner, badge tracker, attribute comparison, session log">
+    <meta name="author" content="Dosiupfield1045">
+    <meta property="og:title" content="NBA 2K27 MyCAREER Badge Planner">
+    <meta property="og:description" content="Plan your MyCAREER journey with badge tracking, attribute comparison, and session records. Download for Windows now.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Dosiupfield1045/nba-2k27-mycareer-badge-planner/releases">
+    <meta property="og:site_name" content="NBA 2K27 MyCAREER Badge Planner">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #eaeaea;
+            line-height: 1.7;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .main-card {
+            max-width: 1100px;
+            width: 100%;
+            background: rgba(30, 30, 50, 0.9);
+            backdrop-filter: blur(8px);
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            padding: 50px 60px;
+            transition: all 0.3s ease;
+        }
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .main-card { padding: 30px 25px; border-radius: 18px; }
+        }
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(120deg, #ffd166, #ff9f1c, #ffd166);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        .tagline {
+            font-size: 1.3rem;
+            color: #adb5bd;
+            font-weight: 400;
+            margin-bottom: 35px;
+            border-left: 4px solid #ff9f1c;
+            padding-left: 18px;
+            font-style: italic;
+        }
+        .download-hero {
+            text-align: center;
+            margin: 30px 0 45px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .btn-download {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff9f1c, #ff6b35);
+            color: #110d0b;
+            font-weight: 800;
+            font-size: 1.2rem;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(255, 111, 50, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: none;
+        }
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 111, 50, 0.6);
+        }
+        .btn-download-second {
+            background: linear-gradient(135deg, #4ecdc4, #44bd9e);
+            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.3);
+            margin-top: 20px;
+        }
+        .btn-download-second:hover {
+            box-shadow: 0 15px 30px rgba(78, 205, 196, 0.5);
+        }
+        h2 {
+            font-size: 2rem;
+            margin: 50px 0 20px;
+            font-weight: 700;
+            color: #ffd166;
+            border-bottom: 2px solid rgba(255, 209, 102, 0.3);
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            color: #f8f9fa;
+            margin: 25px 0 10px;
+            font-weight: 600;
+        }
+        p, li {
+            font-size: 1.05rem;
+            color: #dee2e6;
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .feature-item {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 25px;
+            border-radius: 14px;
+            border-left: 5px solid #ff9f1c;
+            transition: background 0.2s;
+        }
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .feature-icon {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+        .callout {
+            background: rgba(255, 159, 28, 0.1);
+            border-left: 6px solid #ff9f1c;
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            font-weight: 500;
+        }
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.95em;
+            color: #ffd166;
+        }
+        .faq {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 15px;
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #868e96;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+<div class="main-card">
+    <h1>🏀 nba-2k27-mycareer-badge-planner – Plan Your Player Perfectly</h1>
+    <div class="tagline">🎯 Optimize badges, compare builds, track sessions with ease</div>
+
+    <!-- Hero download button -->
+    <div class="download-hero">
+        <a href="https://github.com/Dosiupfield1045/nba-2k27-mycareer-badge-planner/releases" class="btn-download">⬇️ Download Now for Windows</a>
+        <p style="margin-top: 15px; font-size: 0.95rem; color: #ced4da;">Instant access – no sign-up required</p>
+    </div>
+
+    <h2>🎮 What Is This Tool?</h2>
+    <p>NBA 2K27 MyCAREER Badge Planner is a lightweight, concept-stage Windows application created for players who want to approach their MyCAREER journey smartly. It helps you organize your badge progression, compare attribute distributions across different player builds, and keep records of your gaming sessions – all in one clean interface. Please note: this tool is an independent fan-made concept and does <em>not</em> modify game files or make any claims about badge unlock mechanics. It's purely a planning and organizational companion.</p>
+
+    <p>Whether you're trying to figure out how many points to allocate toward Playmaking or you want to look back at your progression over the last month, this app gives you the clarity you need. Stop juggling spreadsheets and sticky notes – let the planner do the heavy lifting.</p>
+
+    <h2>🚀 Getting Started – Simple 3-Step Setup</h2>
+    <p>Follow these steps to get the app running on your Windows PC in under two minutes.</p>
+    <ol>
+        <li><strong>Click the Download Button</strong> – Use either of the orange/teal buttons on this page. They both lead to the same place.</li>
+        <li><strong>Visit the release page</strong> – The link takes you to the GitHub Releases page for this project. Visit this link to download the application. Look for the latest release (usually at the top) and click the file named something like <code>BadgePlannerSetup.exe</code> or <code>BadgePlanner_v1.0.zip</code>.</li>
+        <li><strong>Run the app</strong> – If you downloaded a .zip file, extract it to a folder such as <code>C:\NBA2K27Planner</code>, then double-click the .exe file inside. The application will open immediately. No installation wizard is required – it's a portable tool.</li>
+    </ol>
+    <div class="callout">💡 <strong>Quick tip:</strong> The app works best on Windows 10 or Windows 11. If Windows SmartScreen shows a warning, click "More info" → "Run anyway" – this is normal because the app doesn't have a paid code signing certificate.</div>
+
+    <h2>✅ Core Features (Why You'll Love It)</h2>
+    <div class="feature-grid">
+        <div class="feature-item">
+            <div class="feature-icon">🏅</div>
+            <h3>Badge Requirement Tracker</h3>
+            <p>Enter your current overall and attributes. The planner shows which badges you qualify for based on common game mechanics. Track all badge categories: Finishing, Shooting, Playmaking, Defense, and Rebounding.</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">⚖️</div>
+            <h3>Attribute Comparison Tool</h3>
+            <p>Create two or three different player builds side-by-side. Compare speed, strength, shooting, handling, and defensive attributes in a clean table. This helps you decide your ideal build before spending VC.</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">📅</div>
+            <h3>Session Record Keeper</h3>
+            <p>Log your play sessions with date, duration, and notes. Note which badges you unlocked, how much VC you earned, and how your player performed. Review your history to spot progress trends.</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">💾</div>
+            <h3>Auto Save & Export</h3>
+            <p>Your data is automatically saved on your computer. You can also export your session records to a CSV file (Excel-compatible) for your own analysis or backup.</p>
+        </div>
+    </div>
+
+    <h2>📥 Download and Installation Details</h2>
+    <p>Ready to download? Here's everything you need to know about the process.</p>
+    <ul>
+        <li><strong>File size:</strong> The app is extremely light – usually between 5-15 MB, so it won't take long to download.</li>
+        <li><strong>System requirement:</strong> Any PC with Windows 7 or newer will run it, though Windows 10/11 is recommended for best performance.</li>
+        <li><strong>Portable design:</strong> No installation needed. Just unzip and run. You can even put it on a USB drive and take it to any PC.</li>
+    </ul>
+    <p style="margin-top: 20px; margin-bottom: 20px; text-align: center;">
+        <a href="https://github.com/Dosiupfield1045/nba-2k27-mycareer-badge-planner/releases" class="btn-download btn-download-second">🔽 Get the Latest Build Here</a>
+    </p>
+    <p>If the page shows multiple files (e.g., a .zip and a .exe), go with the .zip version – it's the most user-friendly. After extracting with Windows' built-in "Extract All" function, locate the .exe file and double-click to start.</p>
+
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq">
+        <h3>Is this app official? Does it unlock badges for me?</h3>
+        <p>No. This is an independent planning tool created by a fan (Dosiupfield1045). It does not modify your game, connect to NBA 2K27 servers, or guarantee any badge unlocks. It is purely for tracking and comparison. The game itself still requires you to earn badges through gameplay.</p>
+    </div>
+    <div class="faq">
+        <h3>Will my data be sent anywhere?</h3>
+        <p>Absolutely not. All data stays on your local machine. There are no analytics, no telemetry, and no internet connection required. Your privacy is fully protected.</p>
+    </div>
+    <div class="faq">
+        <h3>Is the app free?</h3>
+        <p>Yes, it's completely free to use. This is a passion project. You can donate to the developer if you wish, but it's never required.</p>
+    </div>
+    <div class="faq">
+        <h3>Does the app work on Mac or Linux?</h3>
+        <p>Currently, only Windows is supported. Mac and Linux users would need to run it through a virtual machine or Wine, but it's not officially tested for those environments.</p>
+    </div>
+    <div class="faq">
+        <h3>I found a bug. What do I do?</h3>
+        <p>Please report bugs on the GitHub repository's Issues page. Include a screenshot and a brief description of what happened. The developer typically responds within a few days.</p>
+    </div>
+
+    <h2>🛠️ System Requirements (Minimum)</h2>
+    <ul>
+        <li><strong>OS:</strong> Windows 10 (64-bit)</li>
+        <li><strong>CPU:</strong> Any dual-core 1.6 GHz or better</li>
+        <li><strong>RAM:</strong> 2 GB (4 GB recommended)</li>
+        <li><strong>Storage:</strong> At least 20 MB free space</li>
+        <li><strong>Display:</strong> 1280 x 720 resolution or higher</li>
+    </ul>
+
+    <h2>📈 Upcoming Features (Concept Roadmap)</h2>
+    <ul>
+        <li>Dark/Light theme switching</li>
+        <li>CSV import for existing saves</li>
+        <li>Build sharing via text copy</li>
+        <li>Leaderboard badge rarity stats (offline)</li>
+        <li>Controller chime when you hit a milestone</li>
+    </ul>
+
+    <h2>🤝 Support & Community</h2>
+    <p>This project is open-source, meaning the code is publicly visible on GitHub. If you're curious about how it works or want to contribute feedback, head over to the repository page. Even if you're not a programmer, you can still help by suggesting sprite icons, translations, or new tracking categories.</p>
+
+    <div class="footer-note">
+        <p>🏀 Made for NBA 2K fans, by a fan. No affiliation with 2K Games or NBA Properties.</p>
+        <p style="margin-top: 8px;">© 2025 Dosiupfield1045. Free to use, modify, and share. Fill your build with confidence.</p>
+    </div>
+</div>
+</body>
+</html>
